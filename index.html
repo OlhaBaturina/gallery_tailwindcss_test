@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header >
+        <div class="inline-flex items-center">
+            <a
+              href="/"
+              aria-label="Path of Homepage"
+              lang="en"
+              
+            >
+            <svg width="35">
+              <use href="./assets/vector.svg#Logo"></use>
+            </svg>
+            </a>
+    
+          <nav >
+            <!--Logo-->
+            
+            <ul class="inline-flex flex-row-reverse space-x-4 space-x-reverse " >
+              <!-- could be popup -->
+              
+              <li class="inline-flex items-end rounded-lg px-5 "
+>
+                Our Work
+                <svg class="fill-accent " width="15px" height="12px">
+                  <use href="./assets/vector.svg#ArrowDown"></use>
+                </svg>
+              </li>
+    
+              <li >
+                <a
+                  href="#"
+                  aria-label="link to the page about the Project"
+                  class="text-primary font-body rounded-lg text-sm px-5 text-center"
+                   
+                >
+                  About
+                </a>
+              </li>
+    
+              <li >
+                <a 
+                  href="#" 
+                  aria-label="link to the new's page" 
+                  class="text-primary font-body rounded-lg text-sm px-5   text-center"
+                >
+                  News
+                </a>
+              </li>
+    
+              <li >
+                <a 
+                  href="#" 
+                  aria-label="link to the page about the Team" 
+                  class="text-primary font-body rounded-lg text-sm px-5   text-center"
+
+                >
+                  Team
+                </a>
+              </li>
+            </ul>
+            <button 
+              type="button" 
+              class="text-primary bg-accent hover:bg-accentHover focus:bg-accentHover focus:outline-none font-medium rounded-lg text-sm px-5   text-center inline-flex items-center dark:focus:ring-accent dark:bg-accent dark:border-accent dark:text-primary dark:hover:bg-accentHover">
+              Contact
+            </button>
+          </nav>
+        
+          <!-- Mobile menu -->
+          <button
+            type="button"
+             
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+               
+              width="25"
+              height="25"
+              aria-label="Mobile menu"
+            >
+              <use
+                 
+                href="./assets/vector.svg#MobileMenu"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+     
+      <main>
+    
+        <!-- Gallery -->
+        <section>
+          <ul>
+            <li >
+              <picture>
+                <img
+                  src="./assets/elephant.jpeg"
+                  width="370"
+                  alt="elephant"
+                />
+              </picture>
+            </li>
+            <li >
+              <picture>
+                <img
+                  src="./assets/flamingo.jpeg"
+                  width="370"
+                  alt="flamingo"
+                />
+              </picture>
+            </li>
+            <li >
+              <picture>
+                <img
+                  src="./assets/giraffe.jpeg"
+                  width="370"
+                  alt="giraffe"
+                />
+              </picture>
+            </li>
+            <li >
+              <picture>
+                <img
+                  src="./assets/lion.jpeg"
+                  width="370"
+                  alt="lion"
+                />
+              </picture>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </body>
+</html>
