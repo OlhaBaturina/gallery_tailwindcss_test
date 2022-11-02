@@ -7,40 +7,44 @@
     <link href="/dist/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <header >
-        <div class="inline-flex items-center">
+<body class="text-primary font-body">
+    <header class="text-sm ">
+        <div class="flex justify-between items-center px-s space-x-1 h-xl">
+          <div class="inline-flex max-h-min">
             <a
               href="/"
               aria-label="Path of Homepage"
               lang="en"
               
             >
-            <svg width="35">
+            <svg width="35" >
               <use href="./assets/vector.svg#Logo"></use>
             </svg>
             </a>
+          </div>  
+          
     
-          <nav >
+          <nav class="inline-flex">
             <!--Logo-->
             
-            <ul class="inline-flex flex-row-reverse space-x-4 space-x-reverse " >
+            <ul class="inline-flex flex-row space-x-4 space-x-reverse " >
               <!-- could be popup -->
               
-              <li class="inline-flex items-end rounded-lg px-5 "
+              <li class="inline-flex items-center px-3 "
 >
                 Our Work
-                <svg class="fill-accent " width="15px" height="12px">
-                  <use href="./assets/vector.svg#ArrowDown"></use>
-                </svg>
+                <div class="inline-block mb-1">
+                  <svg class="fill-accent" width="9px" height="10px" >
+                    <use href="./assets/vector.svg#ArrowDown"></use>
+                  </svg>
+                </div>
               </li>
     
               <li >
                 <a
                   href="#"
                   aria-label="link to the page about the Project"
-                  class="text-primary font-body rounded-lg text-sm px-5 text-center"
-                   
+                  class="px-3 "
                 >
                   About
                 </a>
@@ -50,7 +54,7 @@
                 <a 
                   href="#" 
                   aria-label="link to the new's page" 
-                  class="text-primary font-body rounded-lg text-sm px-5   text-center"
+                  class="px-3"
                 >
                   News
                 </a>
@@ -60,8 +64,7 @@
                 <a 
                   href="#" 
                   aria-label="link to the page about the Team" 
-                  class="text-primary font-body rounded-lg text-sm px-5   text-center"
-
+                  class="px-3"
                 >
                   Team
                 </a>
@@ -69,13 +72,16 @@
             </ul>
             <button 
               type="button" 
-              class="text-primary bg-accent hover:bg-accentHover focus:bg-accentHover focus:outline-none font-medium rounded-lg text-sm px-5   text-center inline-flex items-center dark:focus:ring-accent dark:bg-accent dark:border-accent dark:text-primary dark:hover:bg-accentHover">
+              class=" bg-accent hover:bg-accentHover focus:bg-accentHover 
+                focus:outline-none text-sm px-5 py-2 text-center rounded-sm
+                inline-flex ">
               Contact
             </button>
           </nav>
         
           <!-- Mobile menu -->
-          <button
+
+          <!-- <button
             type="button"
              
             aria-expanded="false"
@@ -93,14 +99,36 @@
                 href="./assets/vector.svg#MobileMenu"
               ></use>
             </svg>
-          </button>
+          </button> -->
         </div>
       </header>
      
-      <main>
-    
+      <main  class="bg-primary text-textWhite ">
+        <section class="flex justify-between pt-m pr-xl">
+          <!-- for desktop -->
+          <div class="flex items-start">
+            <div class="bg-accent h-px w-l rounded-r-lg mr-4"></div>
+            <h1 class="inline-block text-4xl font-title text-left">Gallery</h1>
+          </div>
+          
+          <div 
+              class=" bg-accent text-primary hover:bg-accentHover focus:bg-accentHover 
+                focus:outline-none text-sm rounded-sm h-min">
+                <a href="#" class="block py-2 px-4 text-center">
+                  Discover Our Gallery
+                </a>
+              
+            </div>
+        </section>
         <!-- Gallery -->
-        <section>
+        <section class="px-xl">
+          <div class="flex justify-between pt-s pr-xl">
+            <ul class="inline-flex">
+              <li class="pr-2">Hill</li>
+              <li class="pr-2">Ironworks</li>
+              <li class="pr-2">Cambridge</li>
+            </ul>
+          </div>
           <ul>
             <li >
               <picture>
@@ -141,5 +169,6 @@
           </ul>
         </section>
       </main>
+      
     </body>
 </html>
