@@ -7,7 +7,7 @@
     <link href="/dist/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="bg-primary text-primary font-body">
+<body class="bg-primary text-primary font-body font-light text-m">
     <header class="text-sm bg-textWhite">
         <div class="flex justify-between items-center px-s space-x-1 h-xl">
           <div class="inline-block max-h-min">
@@ -110,25 +110,28 @@
       </header>
      
       <main  class=" text-textWhite">
-        <section class="flex justify-between pt-m pr-2xl">
-          <!-- for desktop -->
+        <section class="flex justify-between pt-xl pr-2xl">
           <div class="flex items-start">
+            <!-- for desktop -->
             <div class="bg-accent h-px w-l rounded-r-lg mr-6"></div>
+
             <h1 class="inline-block text-4xl font-title text-left">Gallery</h1>
           </div>
           
+          <!-- gallery button -->
           <div 
               class=" bg-accent text-primary focus:outline-none text-sm rounded-sm h-min 
                 hover:scale-95 duration-500 hover:bg-accentHover focus:bg-accentHover">
                 <a href="#" class="block py-2 px-4 text-center">
                   Discover Our Gallery
                 </a>
-              
             </div>
         </section>
+        
+        <!-- topics -->
         <section class="px-2xl">
           <div class="flex justify-start items-center pt-s pr-xl">
-            <ul class="inline-flex divide-x">
+            <ul class="inline-flex divide-x text-s font-extralight opacity-80">
               <li class="pr-2">Hill</li>
               <li class="px-2">Ironworks</li>
               <li class="px-2">Cambridge</li>
@@ -141,7 +144,7 @@
             </div>
 
         <!-- Gallery -->
-          <ul class="grid overflow-hidden grid-cols-10 grid-rows-2 gap-4">
+          <ul class="grid overflow-hidden grid-cols-10 grid-rows-2 gap-4 mt-3">
             <li class="box row-start-1 row-end-1 col-start-1 col-span-3">
                 <img 
                   src="./assets/lion.jpeg "
