@@ -7,10 +7,10 @@
     <link href="/dist/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="text-primary font-body">
-    <header class="text-sm ">
+<body class="bg-primary text-primary font-body">
+    <header class="text-sm bg-textWhite">
         <div class="flex justify-between items-center px-s space-x-1 h-xl">
-          <div class="inline-flex max-h-min">
+          <div class="inline-block max-h-min">
             <a
               href="/"
               aria-label="Path of Homepage"
@@ -24,23 +24,25 @@
           </div>  
           
     
-          <nav class="inline-flex">
+          <nav class="block">
             <!--Logo-->
             
             <ul class="inline-flex flex-row space-x-4 space-x-reverse " >
               <!-- could be popup -->
               
-              <li class="inline-flex items-center px-3 "
->
+              <li class="items-center px-3 py-s cursor-pointer 
+                 hover:text-accent duration-200"
+              >
                 Our Work
-                <div class="inline-block mb-1">
-                  <svg class="fill-accent" width="9px" height="10px" >
+                <div class="inline-block ml-1">
+                  <svg class="fill-accent" width="10px" height="10px" >
                     <use href="./assets/vector.svg#ArrowDown"></use>
                   </svg>
                 </div>
               </li>
     
-              <li >
+              <li class="py-s cursor-pointer 
+               hover:text-accent duration-200">
                 <a
                   href="#"
                   aria-label="link to the page about the Project"
@@ -50,17 +52,19 @@
                 </a>
               </li>
     
-              <li >
+              <li class="py-s cursor-pointer 
+               hover:text-accent duration-200">
                 <a 
                   href="#" 
                   aria-label="link to the new's page" 
-                  class="px-3"
+                  class="px-3 "
                 >
                   News
                 </a>
               </li>
     
-              <li >
+              <li class="py-s cursor-pointer 
+              hover:text-accent duration-200">
                 <a 
                   href="#" 
                   aria-label="link to the page about the Team" 
@@ -72,7 +76,9 @@
             </ul>
             <button 
               type="button" 
-              class=" bg-accent hover:bg-accentHover focus:bg-accentHover 
+              class=" bg-accent 
+                hover:scale-95 duration-500
+              hover:bg-accentHover focus:bg-accentHover 
                 focus:outline-none text-sm px-5 py-2 text-center rounded-sm
                 inline-flex ">
               Contact
@@ -103,68 +109,63 @@
         </div>
       </header>
      
-      <main  class="bg-primary text-textWhite ">
-        <section class="flex justify-between pt-m pr-xl">
+      <main  class=" text-textWhite">
+        <section class="flex justify-between pt-m pr-2xl">
           <!-- for desktop -->
           <div class="flex items-start">
-            <div class="bg-accent h-px w-l rounded-r-lg mr-4"></div>
+            <div class="bg-accent h-px w-l rounded-r-lg mr-6"></div>
             <h1 class="inline-block text-4xl font-title text-left">Gallery</h1>
           </div>
           
           <div 
-              class=" bg-accent text-primary hover:bg-accentHover focus:bg-accentHover 
-                focus:outline-none text-sm rounded-sm h-min">
+              class=" bg-accent text-primary focus:outline-none text-sm rounded-sm h-min 
+                hover:scale-95 duration-500 hover:bg-accentHover focus:bg-accentHover">
                 <a href="#" class="block py-2 px-4 text-center">
                   Discover Our Gallery
                 </a>
               
             </div>
         </section>
-        <!-- Gallery -->
-        <section class="px-xl">
-          <div class="flex justify-between pt-s pr-xl">
-            <ul class="inline-flex">
+        <section class="px-2xl">
+          <div class="flex justify-start items-center pt-s pr-xl">
+            <ul class="inline-flex divide-x">
               <li class="pr-2">Hill</li>
-              <li class="pr-2">Ironworks</li>
-              <li class="pr-2">Cambridge</li>
+              <li class="px-2">Ironworks</li>
+              <li class="px-2">Cambridge</li>
             </ul>
-          </div>
-          <ul>
-            <li >
-              <picture>
-                <img
-                  src="./assets/elephant.jpeg"
-                  width="370"
-                  alt="elephant"
-                />
-              </picture>
-            </li>
-            <li >
-              <picture>
-                <img
-                  src="./assets/flamingo.jpeg"
-                  width="370"
-                  alt="flamingo"
-                />
-              </picture>
-            </li>
-            <li >
-              <picture>
-                <img
-                  src="./assets/giraffe.jpeg"
-                  width="370"
-                  alt="giraffe"
-                />
-              </picture>
-            </li>
-            <li >
-              <picture>
-                <img
-                  src="./assets/lion.jpeg"
-                  width="370"
+              <a href="#" class="block p-1 hover:scale-150 duration-500">
+                <svg class="fill-accent h-3 w-5">
+                  <use href="./assets/vector.svg#ArrowLeft"></use>
+                </svg>
+              </a>
+            </div>
+
+        <!-- Gallery -->
+          <ul class="grid overflow-hidden grid-cols-10 grid-rows-2 gap-4">
+            <li class="box row-start-1 row-end-1 col-start-1 col-span-3">
+                <img 
+                  src="./assets/lion.jpeg "
                   alt="lion"
                 />
-              </picture>
+            </li>
+            <li class="box row-start-2 row-end-2 col-start-1 col-span-3">
+                <img
+                  src="./assets/flamingo.jpeg"
+                  alt="flamingo"
+                />
+            </li>
+            <li class="box row-start-1 row-span-2 col-start-4 col-end-10">
+                <img class="h-full object-cover"
+                  src="./assets/elephant.jpeg"
+                  
+                  alt="elephant"
+                />
+            </li>
+            <li class="box row-start-1 row-span-2 col-start-10 col-span-11">
+                <img class="h-full object-cover"
+                  src="./assets/giraffe.jpeg"
+                  alt="giraffe"
+                />
             </li>
           </ul>
         </section>

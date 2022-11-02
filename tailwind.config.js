@@ -9,7 +9,7 @@ module.exports = {
     colors: {
       primary: '#151515',
       accent: '#F6B600',
-      accentHover: '#F9CA49',
+      accentHover: '#CFA226',
       textWhite: '#FFFFFE'
 
     },
@@ -20,16 +20,21 @@ module.exports = {
     extend: {
       // задати значення
       spacing: {
+        'xs': '32px',
         's': '2rem',
         'm': '3rem',
         'l': '4rem',
         'xl': '5rem',
-        '9xl': '128rem',
+        '2xl': '6rem',
+        '3xl': '7rem',
+
       },
       borderRadius: {
         '4xl': '2rem',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
