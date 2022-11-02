@@ -7,109 +7,92 @@
     <link href="/dist/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body class="bg-primary text-primary font-body font-light text-l tablet:text-m">
     <header class="text-sm bg-textWhite">
         <div class="flex justify-between items-center px-s space-x-1 h-xl">
-            <!--Logo-->
+          
+          <!--Logo-->
           <div class="tablet:max-h-min">
             <a href="/" aria-label="Path of Homepage" lang="en">
             <svg class="h-14 w-14 tablet:h-10 tablet:w-10">
               <use href="./assets/vector.svg#Logo"></use>
             </svg>
             </a>
-          </div>  
-          
+          </div>
+
+          <!-- Navigation -->
           <nav class="hidden tablet:block">
-            <ul class="inline-flex flex-row space-x-4 space-x-reverse " >
-              <!-- could be popup -->
-              <li class="items-center px-3 py-s cursor-pointer 
-                 hover:text-accent duration-200">
+            <ul class="inline-flex flex-row space-x-4 space-x-reverse">
+
+              <li class="items-center px-3 py-s cursor-pointer hover:text-accent duration-200">
                 Our Work
-                <div class="inline-block ml-1">
-                  <svg class="fill-accent" width="10px" height="10px" >
-                    <use href="./assets/vector.svg#ArrowDown"></use>
-                  </svg>
-                </div>
+                <svg class="inline-block ml-1 w-3 h-3 fill-accent">
+                  <use href="./assets/vector.svg#ArrowDown"></use>
+                </svg>
               </li>
-    
-              <li class="py-s cursor-pointer 
-               hover:text-accent duration-200">
-                <a
-                  href="#"
-                  aria-label="link to the page about the Project"
+
+              <li class="py-s cursor-pointer hover:text-accent duration-200">
+                <a href="#" aria-label="link to the page about the Project" 
                   class="px-3">
                   About
                 </a>
               </li>
-    
-              <li class="py-s cursor-pointer 
-               hover:text-accent duration-200">
-                <a 
-                  href="#" 
-                  aria-label="link to the new's page" 
-                  class="px-3 "
-                >
+
+              <li class="py-s cursor-pointer hover:text-accent duration-200">
+                <a href="#" aria-label="link to the new's page" 
+                  class="px-3">
                   News
                 </a>
               </li>
-    
-              <li class="py-s cursor-pointer 
-              hover:text-accent duration-200">
-                <a 
-                  href="#" 
-                  aria-label="link to the page about the Team" 
-                  class="px-3"
-                >
+
+              <li class="py-s cursor-pointer hover:text-accent duration-200">
+                <a href="#" aria-label="link to the page about the Team" 
+                  class="px-3">
                   Team
                 </a>
               </li>
             </ul>
-            <button 
-              type="button" 
-              class=" bg-accent 
-                hover:scale-95 duration-500
-              hover:bg-accentHover focus:bg-accentHover 
-                focus:outline-none text-sm px-5 py-2 text-center rounded-sm
-                inline-flex ">
-              Contact
+
+            <button type="button" 
+              class="inline-flex bg-accent rounded-sm text-sm px-5 py-2 text-center
+                hover:scale-95 duration-500hover:bg-accentHover 
+              focus:bg-accentHover focus:outline-none">
+                Contact
             </button>
           </nav>
-        
+
           <!-- Mobile menu -->
-          <button class="tablet:hidden"
-            type="button"
-            aria-expanded="false"
-            aria-controls="menu-container"
-            data-menu-button>
-              <svg class="fill-gray-200 opacity-70" width="25" height="25" aria-label="Mobile menu">
-                <use href="./assets/vector.svg#MobileMenu"></use>
-              </svg>
+          <button class="tablet:hidden" type="button" aria-expanded="false" 
+          aria-controls="menu-container" data-menu-button>
+            <svg class="fill-gray-200 opacity-70 w-7 h-7" aria-label="Mobile menu">
+              <use href="./assets/vector.svg#MobileMenu"></use>
+            </svg>
           </button>
+          <!--  -->
         </div>
       </header>
-     
+
+      <!-- Main section -->
       <main  class=" text-textWhite">
         <section class="flex justify-between pt-m tablet:pt-xl pr-2xl">
           <div class="flex items-start">
-            <!-- for desktop -->
             <div class="hidden tablet:block bg-accent h-px w-l rounded-r-lg mr-6 mt-2"></div>
-
             <h1 class="ml-xs tablet:ml-0 block text-5xl font-thin tracking-tighter uppercase font-title text-left">
               Gallery
             </h1>
           </div>
-          
-          <!-- gallery button -->
-          <div 
-              class="hidden tablet:block bg-accent text-primary focus:outline-none text-sm rounded-sm h-min 
-                hover:scale-95 duration-500 hover:bg-accentHover focus:bg-accentHover">
-                <a href="#" class="block py-2 px-4 text-center">
-                  Discover Our Gallery
-                </a>
-            </div>
+
+          <!-- Desktop gallery button -->
+          <div class="hidden tablet:block bg-accent rounded-sm h-min text-primary text-sm 
+            hover:scale-95 duration-500 hover:bg-accentHover focus:outline-none 
+            focus:bg-accentHover active:bg-auto">
+            <a href="#" class="block py-2 px-4 text-center">
+              Discover Our Gallery
+            </a>
+          </div>
         </section>
-        
-        <!-- topics -->
+
         <section class="px-xs tablet:px-xl desktop:px-2xl pt-m desctop:pt-s">
           <div class="flex justify-between tablet:justify-start items-center tablet:pr-xl">
             <ul class="inline-flex divide-x text-s font-extralight opacity-80">
@@ -117,56 +100,48 @@
               <li class="px-2">Ironworks</li>
               <li class="px-2">Cambridge</li>
             </ul>
-              <a href="#" class="block p-1 active:scale-150 hover:scale-150 duration-500">
-                <svg class="fill-accent h-5 w-7 tablet:h-3 tablet:w-5">
-                  <use href="./assets/vector.svg#ArrowLeft"></use>
-                </svg>
-              </a>
-            </div>
 
-        <!-- Gallery -->
-       
+            <a href="#" class="block p-1 active:scale-150 hover:scale-150 duration-500">
+              <svg class="fill-accent h-5 w-7 tablet:h-3 tablet:w-5">
+                <use href="./assets/vector.svg#ArrowLeft"></use>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Gallery -->
           <ul class="mt-3 
             grid overflow-hidden grid-cols-none auto-rows-max grid-rows-5
-            tablet:gap-4
-            tablet:grid-cols-2 tablet:grid-rows-2
+            tablet:gap-4 tablet:grid-cols-2 tablet:grid-rows-2
             desktop:grid-cols-10">
 
             <li class="mb-2 tablet:mb-0
               box row-start-1 row-end-2 col-start-1 col-span-1
               desktop:row-end-1 desktop:col-span-3">
-                <img class="h-full object-cover"
-                  src="./assets/lion.jpeg "
-                  alt="lion"/>
+              <img class="h-full object-cover" src="./assets/lion.jpeg" alt="lion"/>
             </li>
 
             <li class="mb-2 tablet:mb-0
               box row-start-2 row-end-3 col-start-1 col-span-1
               tablet:row-end-2
               desktop:row-end-2 desktop:col-span-3">
-                <img class="h-full object-cover"
-                  src="./assets/flamingo.jpeg"
-                  alt="flamingo"/>
+              <img class="h-full object-cover" src="./assets/flamingo.jpeg" alt="flamingo"/>
             </li>
 
             <li class="mb-2 tablet:mb-0
               box row-start-3 row-end-4 col-start-1 col-span-1
               tablet:row-start-1 tablet:row-span-1 tablet:col-start-2 tablet:col-span-2
               desktop:row-span-2 desktop:col-start-4 desktop:col-end-10">
-                <img class="h-full object-cover"
-                  src="./assets/elephant.jpeg"
-                  alt="elephant"/>
+              <img class="h-full object-cover" src="./assets/elephant.jpeg" alt="elephant"/>
             </li>
+
             <li class="mb-2 tablet:mb-0
               box row-start-4 row-span-5 col-start-1 col-span-1
               tablet:row-start-2 tablet:row-end-2 tablet:col-start-2 tablet:col-span-2
               desktop:row-start-1 desktop:row-span-2 desktop:col-start-10 desktop:col-span-11">
-                <img class="h-full object-cover"
-                  src="./assets/giraffe.jpeg"
-                  alt="giraffe"
-                />
+                <img class="h-full object-cover" src="./assets/giraffe.jpeg" alt="giraffe"/>
             </li>
           </ul>
+
           <!-- mobile gallery button -->
           <div class="flex justify-end">
             <div class="tablet:hidden bg-accent rounded-sm
@@ -177,7 +152,6 @@
                 </a>
             </div>
           </div>
-          
         </section>
       </main>
     </body>
