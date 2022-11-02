@@ -17,6 +17,10 @@ module.exports = {
       title: ['Oswald', 'sans-serif'],
       body: ['"Open Sans"', 'sans-serif'],
     },
+    screens: {
+      'tablet': '576px',
+      'desktop': '960px',
+    },
     extend: {
       // задати значення
       spacing: {
