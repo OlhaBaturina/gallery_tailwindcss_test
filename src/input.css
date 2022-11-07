@@ -4,23 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-link {
-    @apply py-s cursor-pointer hover:text-accent duration-200;
-}
-
-.mobile-nav-link {
-    @apply block py-s active:bg-opacityBlack text-xl font-bold px-3;
-}
-
-.dropdown-link {
-    @apply block py-2 px-6 cursor-pointer hover:text-accent duration-200;
-}
-
-.button {
-    @apply bg-accent rounded-sm text-primary hover:scale-95 active:scale-95 duration-500 hover:bg-accentHover focus:bg-accentHover active:bg-accentHover focus:outline-none text-sm px-4 py-1;
-}
-
- .mobile-hidden {
+.mobile-hidden {
     @apply hidden tablet:block;
 }
 
@@ -34,4 +18,29 @@
 
 .img-fit {
     @apply h-full object-cover;
+}
+
+.button {
+    @apply bg-accent rounded-sm text-primary hover:scale-95 active:scale-95 duration-500 hover:bg-accentHover focus:bg-accentHover active:bg-accentHover focus:outline-none text-sm px-4 py-1;
+}
+
+.nav-link {
+    @apply py-s cursor-pointer hover:text-accent duration-200;
+}
+
+.mobile-nav-link {
+    @apply block py-s active:bg-opacityBlack text-xl font-bold px-3;
+}
+
+.dropdown-link {
+    @apply block py-2 px-6 text-right cursor-pointer hover:text-accent focus:text-accent duration-200;
+}
+
+
+.dropdown-content {
+    @apply hidden absolute -right-2 bg-textWhite shadow-lg px-3 py-4 z-10;
+}
+
+.dropdown:hover .dropdown-content, :focus .dropdown-content {
+    display: block;
 }
