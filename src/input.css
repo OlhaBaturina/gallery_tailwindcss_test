@@ -21,7 +21,7 @@
 }
 
 .button {
-    @apply bg-accent rounded-sm text-primary hover:scale-95 active:scale-95 duration-500 hover:bg-accentHover focus:bg-accentHover active:bg-accentHover focus:outline-none text-sm px-4 py-1;
+    @apply bg-accent rounded-sm text-primary hover:scale-95 active:scale-95 duration-500 hover:bg-accentHover focus:bg-accentHover active:bg-accentHover focus:outline-none text-sm;
 }
 
 .nav-link {
@@ -33,7 +33,7 @@
 }
 
 .dropdown-link {
-    @apply block py-2 px-6 text-right cursor-pointer hover:text-accent focus:text-accent duration-200;
+    @apply block py-1.5 px-7 text-right cursor-pointer hover:text-accent focus:text-accent duration-200;
 }
 
 
@@ -43,4 +43,42 @@
 
 .dropdown:hover .dropdown-content, :focus .dropdown-content {
     display: block;
+}
+
+.animate-modal {
+    transform-origin: top center;
+    animation: translateX 400ms 1 ease-in-out;
+}
+
+.animate-dropdown {
+    transform-origin: top center;
+    animation: rotateMenu 800ms 1 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes translateX {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  
+  80% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg) 
+    }
+    100% {
+        transform: rotateX(0deg) 
+    }
 }
