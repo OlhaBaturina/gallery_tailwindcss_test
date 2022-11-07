@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     <link href="/dist/output.css" rel="stylesheet">
+
     <title>Gallery</title>
     <link rel="icon" type="image/png" href="./assets/logo.png" />
 </head>
@@ -16,9 +18,9 @@
           <!--Logo-->
           <div class="tablet:max-h-min">
             <a href="/" aria-label="Path of Homepage" lang="en">
-            <svg class="h-14 w-14 tablet:h-10 tablet:w-10">
-              <use href="./assets/vector.svg#Logo"></use>
-            </svg>
+              <svg class="h-14 w-14 tablet:h-10 tablet:w-10">
+                <use href="./assets/vector.svg#Logo"></use>
+              </svg>
             </a>
           </div>
 
@@ -26,49 +28,108 @@
           <nav class="mobile-hidden">
             <ul class="inline-flex flex-row space-x-4 space-x-reverse">
 
-              <li class="items-center px-3 nav-link">
-                Our Work
-                <svg class="inline-block ml-1 w-3 h-3 fill-accent">
-                  <use href="./assets/vector.svg#ArrowDown"></use>
-                </svg>
+              <!-- Dropdown -->
+              <li class="items-center">
+                <button id="dropdownDefault" class="px-3 nav-link" data-dropdown-toggle="dropdown" type="button">
+                  Our Work
+                  <svg class="inline-block ml-1 w-3 h-3 fill-accent">
+                    <use href="./assets/vector.svg#ArrowDown"></use>
+                  </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" 
+                  class="hidden z-10 w-32 bg-gray-200 rounded-sm divide-y divide-gray-100 shadow dark:bg-gray-700" 
+                  style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(614.4px, 62px, 0px)">
+
+                  <ul class="py-1 text-sm text-primary" aria-labelledby="dropdownDefault">
+                    <li> <a href="#" class="dropdown-link">Portfolio</a> </li>
+                    <li> <a href="#" class="dropdown-link">Companies</a> </li>
+                    <li> <a href="#" class="dropdown-link">Design</a> </li>
+                    <li> <a href="#" class="dropdown-link">Websites</a> </li>
+                  </ul>
+                </div>
               </li>
 
               <li class="nav-link">
-                <a href="#" aria-label="link to the page about the Project" 
-                  class="px-3">
+                <a href="#" class="px-3" aria-label="link to the page about the Project">
                   About
                 </a>
               </li>
 
               <li class="nav-link">
-                <a href="#" aria-label="link to the new's page" 
-                  class="px-3">
+                <a href="#" class="px-3" aria-label="link to the new's page">
                   News
                 </a>
               </li>
 
               <li class="nav-link">
-                <a href="#" aria-label="link to the page about the Team" 
-                  class="px-3">
+                <a href="#" class="px-3" aria-label="link to the page about the Team">
                   Team
                 </a>
               </li>
             </ul>
 
-            <button type="button" class="button">
-                Contact
-            </button>
+            <button class="button" type="button">Contact</button>
           </nav>
 
           <!-- Mobile menu -->
           <button class="tablet:hidden mobile-menu" type="button" aria-expanded="false" 
-          aria-controls="menu-container" data-menu-button>
+            aria-controls="menu-container" id="data-modal-open">
             <svg class="fill-gray-200 opacity-70 w-7 h-7" aria-label="Mobile menu">
               <use href="./assets/vector.svg#MobileMenu"></use>
             </svg>
           </button>
         </div>
       </header>
+      
+      <!-- Modal for mobile -->
+      <div id="data-modal" style="display: none"
+        class="fixed top-0 bottom-0 left-0 right-0 bg-primary bg-opacity-90 z-30 backdrop-invert-0 w-\[calc\(100vw-100%\)\] overflow-hidden">
+        <div class="absolute top-0 right-0 h-screen w-4/5 bg-textWhite">
+          <!-- Close button -->
+          <button type="button" class="absolute top-8 right-9" id="data-modal-close">
+            <svg class="fill-gray-200 opacity-70 w-5 h-5" aria-label="Mobile menu">
+              <use href="./assets/vector.svg#icon-cross"></use>
+            </svg>
+          </button>
+           <!-- Mobile Navigation -->
+           <nav>
+            <ul class="text-center py-xl divide-y">
+
+              <li class="">
+                <a href="#" class="mobile-nav-link" aria-label="link to the page with Our Work">
+                  Our Work
+                </a>
+              </li>
+
+              <li class="">
+                <a href="#" class="mobile-nav-link" aria-label="link to the page about the Project">
+                  About
+                </a>
+              </li>
+
+              <li class="">
+                <a href="#" class="mobile-nav-link" aria-label="link to the new's page">
+                  News
+                </a>
+              </li>
+
+              <li class="">
+                <a href="#" class="mobile-nav-link" aria-label="link to the page about the Team">
+                  Team
+                </a>
+              </li>
+
+              <li class="">
+                <a href="#" class="mobile-nav-link" aria-label="link to the page with contacts">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
       <!-- Main section -->
       <main  class=" text-textWhite">
@@ -81,7 +142,7 @@
           </div>
 
           <!-- Desktop gallery button -->
-          <div class="mobile-hidden button">
+          <div class="mobile-hidden button p-0">
             <a href="#" class="block py-2 px-4 text-center">
               Discover Our Gallery
             </a>
@@ -104,36 +165,35 @@
           </div>
 
           <!-- Gallery -->
-          <ul class="mt-3 
+          <ul class="mt-3
             grid overflow-hidden grid-cols-none auto-rows-max grid-rows-5
             tablet:gap-4 tablet:grid-cols-2 tablet:grid-rows-2
             desktop:grid-cols-10">
 
-            <li class="imgMargin
-              box row-start-1 row-end-2 col-start-1 col-span-1
+            <li class="img-margin box row-start-1 row-end-2 col-start-1 col-span-1
               desktop:row-end-1 desktop:col-span-3">
-              <img class="h-full object-cover" src="./assets/lion.jpeg" alt="lion"/>
+              <img class="img-fit" src="./assets/lion.jpeg" alt="lion"/>
             </li>
 
-            <li class="imgMargin
+            <li class="img-margin
               box row-start-2 row-end-3 col-start-1 col-span-1
               tablet:row-end-2
               desktop:row-end-2 desktop:col-span-3">
-              <img class="h-full object-cover" src="./assets/flamingo.jpeg" alt="flamingo"/>
+              <img class="img-fit" src="./assets/flamingo.jpeg" alt="flamingo"/>
             </li>
 
-            <li class="imgMargin
+            <li class="img-margin
               box row-start-3 row-end-4 col-start-1 col-span-1
               tablet:row-start-1 tablet:row-span-1 tablet:col-start-2 tablet:col-span-2
               desktop:row-span-2 desktop:col-start-4 desktop:col-end-10">
-              <img class="h-full object-cover" src="./assets/elephant.jpeg" alt="elephant"/>
+              <img class="img-fit" src="./assets/elephant.jpeg" alt="elephant"/>
             </li>
 
-            <li class="imgMargin
+            <li class="img-margin
               box row-start-4 row-span-5 col-start-1 col-span-1
               tablet:row-start-2 tablet:row-end-2 tablet:col-start-2 tablet:col-span-2
               desktop:row-start-1 desktop:row-span-2 desktop:col-start-10 desktop:col-span-11">
-                <img class="h-full object-cover" src="./assets/giraffe.jpeg" alt="giraffe"/>
+                <img class="img-fit" src="./assets/giraffe.jpeg" alt="giraffe"/>
             </li>
           </ul>
 
@@ -147,5 +207,8 @@
           </div>
         </section>
       </main>
+
+      <script src="./js/modal.js"></script>
+      <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     </body>
 </html>

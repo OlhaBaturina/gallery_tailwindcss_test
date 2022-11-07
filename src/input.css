@@ -8,6 +8,14 @@
     @apply py-s cursor-pointer hover:text-accent duration-200;
 }
 
+.mobile-nav-link {
+    @apply block py-s active:bg-opacityBlack text-xl font-bold px-3;
+}
+
+.dropdown-link {
+    @apply block py-2 px-6 cursor-pointer hover:text-accent duration-200;
+}
+
 .button {
     @apply bg-accent rounded-sm text-primary hover:scale-95 active:scale-95 duration-500 hover:bg-accentHover focus:bg-accentHover active:bg-accentHover focus:outline-none text-sm px-4 py-1;
 }
@@ -16,10 +24,14 @@
     @apply hidden tablet:block;
 }
 
-.imgMargin {
+.img-margin {
     @apply mb-2 tablet:mb-0;
 }
 
 .flex-between {
     @apply flex justify-between;
+}
+
+.img-fit {
+    @apply h-full object-cover;
 }

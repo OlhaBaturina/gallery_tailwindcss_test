@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     colors: {
       primary: '#151515',
+      opacityBlack: '#1515151F',
       accent: '#F6B600',
       accentHover: '#CFA226',
       textWhite: '#FFFFFE'
